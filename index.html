@@ -1,0 +1,13 @@
+---
+layout: default
+title: I'm Ronnie Wang
+---
+<h2>{{ page.title }}</h2>
+
+<ul class="list-group">
+{% for post in site.posts %}
+<li class="list-group-item">
+    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.date | date_to_string }} {{ post.title }}</a>
+</li>
+{% endfor %}
+</ul>
